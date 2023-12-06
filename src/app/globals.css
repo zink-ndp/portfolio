@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .nav-item{
+    @apply cursor-pointer mx-5 z-50 text-black hover:text-blue-500 text-xl transition duration-300 ease-in-out hover:scale-110 sm:my-6 my-0
+  }
+
+  .text-title{
+    @apply text-blue-500 md:text-2xl text-sm
+  }
+
+  .text-sub{
+    @apply text-blue-500 md:text-lg text-sm
+  }
+
+  .text-content{
+    @apply text-black md:text-xl text-sm
+  }
+
+  .skill_item{
+    @apply object-cover z-30 shadow-xl
+  }
+}
