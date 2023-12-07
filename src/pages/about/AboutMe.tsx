@@ -1,6 +1,6 @@
 import Edu from "./Edu";
 import Summary from "./Summary";
-import { BasicInf } from "./BasicInf";
+import BasicInf from "./BasicInf";
 import ButtonScrollDown from "@/components/ui/ButtonScrollDown";
 
 export default function AboutMe() {
