@@ -40,7 +40,7 @@ export default function NavBar() {
               scrollToElement("about");
             }}
           >
-            About Me
+            About
           </a>
         </li>
         <li>
