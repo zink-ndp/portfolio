@@ -1,6 +1,5 @@
-import React from "react";
 
-export const BasicInf = () => {
+export default function BasicInf(){
   return (
     <div className="pb-4">
       <p className="text-sub bold mt-2">
