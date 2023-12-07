@@ -4,6 +4,16 @@ import ButtonSolid from "@/components/ui/ButtonSolid";
 export default function Projects() {
   const projects = [
     {
+      name: "Personal Portfolio",
+      type: "Personal Project",
+      time: "Still Developing",
+      description:
+        "A Front-End web show personal data, skills and projects",
+      techs: "ReactJS, NextJS, TypeScript, TailwindsCSS",
+      responsibility: "building personal portfolio web",
+      link: "https://github.com/zink-ndp/portfolio",
+    },
+    {
       name: "Interior Store Management System",
       type: "Personal Project",
       time: "08/2023 - 11/2023",
@@ -97,7 +107,7 @@ export default function Projects() {
           <p className="mt-5 text-lg italic bold text-sub">And many more...</p>
         </div>
       </div>
-      <ButtonScrollDown id="contacts" text="Contact Me" />
+      {/* <ButtonScrollDown id="contacts" text="Contact Me" /> */}
     </>
   );
 }

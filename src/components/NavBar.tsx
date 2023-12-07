@@ -16,7 +16,7 @@ export default function NavBar() {
   return (
     <div className="fixed md:top-8 md:right-20 z-50 flex flex-row bg-white text-black items-center justify-center">
       <ul
-        className={`bg-white p-4 md:rounded-full rounded-md shadow-md md:shadow-none flex flex-col right-5 lg:flex-row md:flex-col sm:flex-col fixed lg:right-15 lg:top-8 
+        className={`bg-white p-4 md:rounded-full rounded-xl shadow-xl md:shadow-none flex flex-col right-5 lg:flex-row md:flex-col sm:flex-col fixed lg:right-15 lg:top-8 
                       sm:right-5 sm:items-end xs:right-5 xs:item-end
                       transition ease-in-out duration-500 
                       ${menuOpened ? "top-20" : "top-[-500px]"}`}
@@ -27,6 +27,7 @@ export default function NavBar() {
             onClick={(e) => {
               e.preventDefault;
               scrollToElement("hero");
+              setMenuOpened(false);
             }}
           >
             Home
@@ -38,6 +39,7 @@ export default function NavBar() {
             onClick={(e) => {
               e.preventDefault;
               scrollToElement("about");
+              setMenuOpened(false);
             }}
           >
             About
@@ -49,6 +51,7 @@ export default function NavBar() {
             onClick={(e) => {
               e.preventDefault;
               scrollToElement("skills");
+              setMenuOpened(false);
             }}
           >
             Skills
@@ -60,6 +63,7 @@ export default function NavBar() {
             onClick={(e) => {
               e.preventDefault;
               scrollToElement("projects");
+              setMenuOpened(false);
             }}
           >
             Projects
@@ -71,6 +75,7 @@ export default function NavBar() {
             onClick={(e) => {
               e.preventDefault;
               scrollToElement("contacts");
+              setMenuOpened(false);
             }}
           >
             Contacts
