@@ -60,7 +60,7 @@ export default function Projects() {
                 <div key={proj.name} className=" w-full flex flex-col mt-3">
                   <p className="text-sub bold">
                     {proj.type}
-                    <a href={proj.link}>
+                    <a href={proj.link} target="_blank">
                       <button className=" float-right bg-transparent border-2 border-blue-500 text-sm text-blue-500 px-3 py-2 rounded-md">
                       <span className=" relative flex h-3 w-3 float-right -mr-4 -mt-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>

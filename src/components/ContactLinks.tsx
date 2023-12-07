@@ -7,7 +7,7 @@ import ic_github from "../assets/images/ic_github.png";
 export default function ContactLinks() {
   return (
     <div className="flex flex-row mt-2">
-      <a href="mailto:phucvinhlp02@gmail.com">
+      <a target="_blank" href="mailto:phucvinhlp02@gmail.com">
         <Image
           className="rounded-full mx-3 md:mx-3 lg:mx-3 z-20 mt-5 shadow-xl hover:scale-125 transition duration-500 ease-in-out"
           src={ic_gmail}
@@ -17,7 +17,7 @@ export default function ContactLinks() {
         />
       </a>
 
-      <a href="https://www.linkedin.com/in/nguyen-vinh-b53341273/">
+      <a target="_blank" href="https://www.linkedin.com/in/nguyen-vinh-b53341273/">
         <Image
           className="rounded-full mx-3 md:mx-3 lg:mx-3 z-20 mt-5 shadow-xl hover:scale-125 transition duration-500 ease-in-out"
           src={ic_linkedln}
@@ -27,7 +27,7 @@ export default function ContactLinks() {
         />
       </a>
 
-      <a href="https://github.com/zink-ndp">
+      <a target="_blank" href="https://github.com/zink-ndp">
         <Image
           className="rounded-full mx-3 md:mx-3 lg:mx-3 z-20 mt-5 shadow-xl hover:scale-125 transition duration-500 ease-in-out"
           src={ic_github}
@@ -37,7 +37,7 @@ export default function ContactLinks() {
         />
       </a>
 
-      <a href="https://www.facebook.com/vinh.is.me">
+      <a target="_blank" href="https://www.facebook.com/vinh.is.me">
         <Image
           className="rounded-full mx-3 md:mx-3 lg:mx-3 z-20 mt-5 shadow-xl hover:scale-125 transition duration-500 ease-in-out"
           src={ic_fb}
@@ -46,7 +46,7 @@ export default function ContactLinks() {
           height={55}
         />
       </a>
-      <a href="tel:0377899959">
+      <a target="_blank" href="tel:0377899959">
         <Image
           className="rounded-full mx-3 md:mx-3 lg:mx-3 z-20 mt-5 shadow-xl hover:scale-125 transition duration-500 ease-in-out"
           src={ic_phone}
