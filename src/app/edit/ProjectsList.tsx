@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-async-client-component */
+
 "use client";
 
 import { collection, getDocs } from "firebase/firestore";

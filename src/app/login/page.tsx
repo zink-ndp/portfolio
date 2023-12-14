@@ -1,23 +1,52 @@
 "use client";
 import { useState } from "react";
 import Circle from "../../components/ui/Circle";
-import {auth} from "../firebase"
+import { auth } from "../firebase";
 import { useRouter } from "next/navigation";
-import { handleLogin } from "../login/handleLogin"
+import { handleLogin } from "../login/handleLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const router = useRouter()
+  const router = useRouter();
 
-  function handleSubmit(){
-    handleLogin(auth, email, pass)
-    console.log(localStorage.getItem("userEmail"))
-    localStorage.getItem("userEmail") && (localStorage.getItem("userEmail")!="") ? (router.push('/edit')) : (router.replace('/'))
-  };
+  function handleSubmit() {
+    handleLogin(auth, email, pass);
+    console.log(localStorage.getItem("userEmail"));
+    localStorage.getItem("userEmail") && localStorage.getItem("userEmail") != ""
+      ? (toast.success("Login Successfully!", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }),
+        setTimeout(() => {
+          router.push("/edit");
+        }, 3000))
+      : (toast.error("Login Failed!", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }),
+        setTimeout(() => {
+          router.replace("/");
+        }, 3000));
+  }
 
   return (
     <>
+      <ToastContainer></ToastContainer>
       <main className=" scroll-smooth min-h-screen p-10 flex items-center justify-center bg-white">
         <div className="bg-white rounded-2xl w-[500px] p-10 shadow-xl z-30 flex flex-col items-center justify-center space-y-6">
           <p className="text-4xl text-blue-500 bold">Login</p>
