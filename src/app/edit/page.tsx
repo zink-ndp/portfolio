@@ -21,7 +21,7 @@ export default function Edit() {
         <ProjectsList></ProjectsList>
         <AddBox></AddBox>
       </div>
-        <button className="fixed bottom-10 right-10">
+        <button className="fixed bottom-10 right-10 bg-white rounded-xl p-3 shadow-md">
           <p onClick={logOut} className="text-red-500 bold">
             Log Out
           </p>
