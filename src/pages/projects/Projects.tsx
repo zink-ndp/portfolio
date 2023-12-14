@@ -57,7 +57,7 @@ export default function Projects() {
           {projects.map((proj) => {
             return (
               <>
-                <div key={proj.name} className=" w-full flex flex-col mt-3">
+                <div key={proj.link} className=" w-full flex flex-col mt-3">
                   <p className="text-sub bold">
                     {proj.type}
                     <a href={proj.link} target="_blank">
